@@ -5,13 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-  }
-  "license": "MIT",
+  },
+  "license": "AGPL-3.0",
   "dependencies": {
     "express": "latest",
     "leanengine": "latest"
-  },
-  "engines": {
-    "node": "latest"
   }
 }
