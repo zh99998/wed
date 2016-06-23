@@ -27,7 +27,10 @@ body {
     display:         flex;
     -webkit-justify-content: center;
     justify-content: center;
-    flex-direction: column
+    flex-direction: column;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #header {
