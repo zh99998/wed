@@ -1,4 +1,17 @@
 {
   "name": "wed",
-  "version": "0.0.1"
+  "version": "1.0.0",
+  "description": "Our Wedding",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+  "license": "MIT",
+  "dependencies": {
+    "express": "latest",
+    "leanengine": "latest"
+  },
+  "engines": {
+    "node": "latest"
+  }
 }
