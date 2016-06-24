@@ -2,13 +2,18 @@
 var express = require('express');
 
 //var todos = require('./routes/todos');
-var AV = require('leanengine');
+//var AV = require('leanengine');
 
 var app = express();
 
-app.use(express.static('public'));
-
 // 加载云引擎中间件
-app.use(AV.express());
+//app.use(AV.express());
+
+app.get('/', function(req, res) {
+    res.cookie('live', '1');
+    res.redirect('/index.html');
+});
+
+app.use(express.static('public'));
 
 module.exports = app;

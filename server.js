@@ -1,5 +1,5 @@
 'use strict';
-var AV = require('leanengine');
+/*var AV = require('leanengine');
 
 AV.init({
   appId: process.env.LEANCLOUD_APP_ID,
@@ -8,7 +8,7 @@ AV.init({
 });
 
 // 如果不希望使用 masterKey 权限，可以将下面一行删除
-AV.Cloud.useMasterKey();
+AV.Cloud.useMasterKey();*/
 
 var app = require('./app');
 
