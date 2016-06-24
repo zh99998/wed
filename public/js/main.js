@@ -9,9 +9,6 @@ var realtime = new Realtime({
 });
 
 
-
-
-
 realtime.createIMClient('Tom').then(function (tom) {
     // 创建与Jerry之间的对话
     return tom.createConversation({
@@ -21,12 +18,18 @@ realtime.createIMClient('Tom').then(function (tom) {
     });
 }).then(function (conversation) {
     // 发送消息
-    console.log(1);
     document.getElementById('form').onsubmit = function (event) {
         event.preventDefault();
+        var form = this;
+        form.submit.setAttribute('disabled', true);
         conversation.send(new AV.TextMessage(this.content.value))
             .then(function (message) {
-                console.log('Tom & Jerry', '发送成功！');
-            }).catch(console.error);
+                alert('发送成功');
+                form.content.value = '';
+                form.submit.removeAttribute('disabled');
+            }).catch(function () {
+            alert('发送失败');
+            form.submit.removeAttribute('disabled');
+        });
     };
 });
